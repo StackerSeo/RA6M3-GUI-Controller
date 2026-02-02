@@ -33,8 +33,8 @@ graph TD
     subgraph Outputs [Actuators & Display]
         MCU ---|GPIO| LED[LED x4]
         MCU ---|GPIO/Digit| FND[4-Digit FND]
-        MCU ---|PWM/Freq| SPK[Small Speaker]
-        MCU ---|PWM/Dir| DC[Small DC Motor]
+        MCU ---|PWM/Freq| SPK[Speaker]
+        MCU ---|PWM/Dir| DC[DC Motor]
     end
 
     %% 스타일링
@@ -73,6 +73,7 @@ graph TD
 - MCU Board: USB-C 5V 기반 전원 공급
 
 - Actuators: 보드 내 VCC 전원 라인 공유 및 GND 공통 접지 (Common GND)
+
 
 
 
