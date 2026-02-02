@@ -26,7 +26,7 @@ graph TD
 
     %% PC 통신
     subgraph PC_Interface [User Interface]
-        GUI[PC GUI App] <== "UART (SCI0)" ==> MCU
+        GUI[PC GUI App] == "UART SCI0" ==> MCU
     end
 
     %% 출력부 (Actuators & Display)
@@ -72,5 +72,6 @@ graph TD
 - MCU Board: USB-C 5V 기반 전원 공급
 
 - Actuators: 보드 내 VCC 전원 라인 공유 및 GND 공통 접지 (Common GND)
+
 
 
