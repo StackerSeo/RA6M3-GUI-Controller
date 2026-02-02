@@ -14,8 +14,8 @@ graph TD
 
     %% 전원 공급 흐름 (보드에서 직접 공급)
     USB ==> MCU
-    MCU -- "5V/3.3V Power Line" ==> SPK
-    MCU -- "5V/3.3V Power Line" ==> DC
+    MCU ==>|5V/3.3V Power Line| SPK
+    MCU ==>|5V/3.3V Power Line| DC
 
     %% 입력부 (Sensors)
     subgraph Inputs [Analog Sensors]
@@ -72,4 +72,5 @@ graph TD
 - MCU Board: USB-C 5V 기반 전원 공급
 
 - Actuators: 보드 내 VCC 전원 라인 공유 및 GND 공통 접지 (Common GND)
+
 
