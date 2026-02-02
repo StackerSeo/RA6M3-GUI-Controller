@@ -31,13 +31,13 @@ SCI UART 통신 프로토콜을 이용한 RA6M3 보드 제어용 PC GUI 인터�
 ### 2. Communication Protocol (Packet Structure)
 | Field | Size (Byte) | Value/Type | Description |
 | :--- | :---: | :---: | :--- |
-| **STX** | 1 | `0x02` | Start of Text (프레임 시작) |
-| **Group Number** | 1 | ASCII | Control Unit 결정 |
-| **CMD Class** | 1 | ASCII | 명령 카테고리, Control / Update 결정 |
-| **CMD** | 1 | ASCII | 세부 동작 명령 |
-| **Data Byte** | 1 | ASCII | 뒤따르는 Data 필드의 길이 (N) |
-| **Data** | 0~N | ASCII | Control Unit별 Data 포함 |
-| **ETX** | 1 | `0x03` | End of Text (프레임 종료) |
+| STX | 1 | `0x02` | Start of Text (프레임 시작) |
+| Group Number | 1 | ASCII | Control Unit 결정 |
+| CMD Class | 1 | ASCII | 명령 카테고리, Control / Update 결정 |
+| CMD | 1 | ASCII | 세부 동작 명령 |
+| Data Byte | 1 | ASCII | 뒤따르는 Data 필드의 길이 (N) |
+| Data | 0~N | ASCII | Control Unit별 Data 포함 |
+| ETX | 1 | `0x03` | End of Text (프레임 종료) |
 
 #### 2-1. Protocol Example
 - Scenario: Group '1', Class 'A'의 LED를 켜기('O') 위해 데이터 '1'을 전송할 경우
