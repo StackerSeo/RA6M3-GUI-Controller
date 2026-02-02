@@ -24,7 +24,7 @@ SCI UART 통신 프로토콜을 이용한 RA6M3 보드 제어용 PC GUI 인터�
 보드와 PC 간의 데이터 통신 구조
 
 ### 1. Hardware Connection
-- PC (USB-to-TTL) <-> RA6M3 (SCI Channel X)
+- PC (USB-to-TTL) <-> RA6M3 (SCI Channel 0)
 - Baudrate: 115200 bps
 - Data bits: 8 / Stop bits: 1 / Parity bits: None
 
