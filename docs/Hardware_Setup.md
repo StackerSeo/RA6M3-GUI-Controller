@@ -40,6 +40,7 @@ graph TD
     %% 스타일링
     style MCU fill:#f9f,stroke:#333,stroke-width:2px
     style USB fill:#fff,stroke:#333,stroke-dasharray: 5 5
+```
 
 ## 2. Pin Mapping Table
 
@@ -72,6 +73,7 @@ graph TD
 - MCU Board: USB-C 5V 기반 전원 공급
 
 - Actuators: 보드 내 VCC 전원 라인 공유 및 GND 공통 접지 (Common GND)
+
 
 
 
