@@ -45,9 +45,24 @@ SCI UART 통신 프로토콜을 이용한 RA6M3 보드 제어용 PC GUI 인터�
 
 ### 3. Project Structure
 ```text
-├── firmware/          # RA6M3 C 소스 코드 (e2 studio project)
-│   ├── src/           # 메인 로직 및 SCI 드라이버
-│   └── ra_gen/        # FSP 생성 설정 파일
-├── gui-app/           # PC용 GUI 소스 코드
-├── docs/              # 회로도 및 프로토콜 설계서
-└── README.md          # 프로젝트 설명서
+├── GUI/                  # PC 제어용 실행 파일 (.exe)
+│   └── RA6M3_Controller.exe
+│
+├── code/                 # RA6M3 C 소스 코드 (e2 studio Project)
+│   ├── .settings/        # 컴파일러 옵션 및 프로젝트 환경 설정 (숨김 폴더)
+│   ├── ra/               # FSP 라이브러리 소스 및 드라이버 본체
+│   ├── ra_cfg/           # FSP 구성(Configuration) 헤더 파일
+│   ├── ra_gen/           # FSP에서 자동 생성한 설정 코드
+│   ├── script/           # 링커 스크립트 (.ld) 등 빌드 관련 스크립트
+│   ├── src/              # 사용자 작성 메인 로직 및 드라이버 소스 (.c, .h)
+│   ├── .project          # e2 studio 프로젝트 정보 파일
+│   ├── .cproject         # C/C++ 프로젝트 설정 파일
+│   ├── configuration.xml # FSP 그래픽 설정 저장 파일 (가장 중요)
+│   └── R7FA6M3AH3CFC.pincfg          # MCU 핀 할당 설정 파일
+│
+├── docs/                 # 프로젝트 설계 및 설명 문서
+│   ├── Hardware_Setup.md
+│   ├── Communication_Protocol.md
+│   └── Software_Implementation.md
+│
+└── README.md             # 프로젝트 메인 대문 페이지
