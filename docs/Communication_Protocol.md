@@ -16,7 +16,7 @@
 | 2 | **CMD Class** | 1 | `0x30~0x39` | 명령 카테고리 (ASCII '0'~'9') |
 | 3 | **CMD Detail** | 1 | `0x30~0x39` | 세부 동작 명령 (ASCII '0'~'9') |
 | 4 | **Data Byte** | 1 | `0x30~0x39` | 뒤에 올 데이터의 길이 N (ASCII) |
-| 5 ~ 5+(N-1) | **Data** | N | Variable | 실제 제어 값/데이터 (ASCII) |
+| 5 | **Data** | N | Variable | 실제 제어 값/데이터 (ASCII) |
 | max | **ETX** | 1 | `0x03` | 프레임 종료 (End of Text) |
 
 ---
@@ -79,4 +79,5 @@ RA6M3의 GPT(General Purpose Timer) 레지스터를 직접 제어하여 고속 �
 
 ### Software Optimization
 - Register Direct Access: `R_GPT3->GTCCR[0]`에 직접 Write 하여 FSP API 오버헤드 제거.
+
 - Interrupt Lock: DAC 사운드 재생 시 `IRQ_Disable()`을 호출하여 타이밍 왜곡 방지.
