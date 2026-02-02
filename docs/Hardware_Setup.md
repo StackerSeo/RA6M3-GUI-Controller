@@ -4,7 +4,7 @@
 
 ## 1. System Block Diagram
 
-'''mermaid
+```mermaid
 graph TD
     %% 중앙 제어부 및 전원
     subgraph System_Core [Main System]
@@ -72,3 +72,4 @@ graph TD
 - MCU Board: USB-C 5V 기반 전원 공급
 
 - Actuators: 보드 내 VCC 전원 라인 공유 및 GND 공통 접지 (Common GND)
+
